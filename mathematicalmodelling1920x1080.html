@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title> Modelling Aletsch Glacier </title>
+
+		<link href="./glaciers.css" rel="stylesheet">
+		<link href="./js/video-js/video-js.css" rel="stylesheet">
+		<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+		
+		<script type="text/javascript" src="./js/video-js/video.js"></script>
+ 
+		<script type="text/javascript" src="./js/l10n.js"></script>
+		<script type="text/javascript" src="./translation.js"></script>	
+		<script type="text/javascript" src="./common.js"></script>	
+
+		<script type="text/javascript">
+			function init() {
+				this.on( "ended", function() { location.href="moreviews1920x1080.html"; } );
+                localize();
+			}
+		</script>
+	</head>
+	<body style="color:#ffffff; background-image: url(images/aletsch_photo_3-black.jpg); background-size: 100% auto;">
+		<div class="contentbox">
+
+			<div class="languagelinkbox">
+				<a href="javascript:selectLanguage('en')">EN</a><br/>
+				<a href="javascript:selectLanguage('de')">DE</a><br/>
+				<a href="javascript:selectLanguage('fr')">FR</a><br/>
+			</div>
+
+			<h1><span id="%Title_MM">a</span></h1>
+			
+			<div style="top:15%; left:3%; width:38%; height: 60%; position:absolute; text-align:justify;">
+                <span id="%Description_MM">a</span>  <br/> <br/>
+                <span id="%Credit_MM">a</span>  <br/> <br/>
+                <span id="%Reference_MM">a</span> <a href="material/Jouvet_Huss_Picasso_Rappaz_Blatter_2009.pdf"> [PDF] </a>
+
+			</div>
+			<div style="top:17%; left: 44%; width:60%; height: 80%; position:absolute;">		
+<!--
+				<video controls="controls" width="800" height="600" poster="./images/affiche_en.png" class="video-js vjs-default-skin vjs-big-play-centered">
+					<source src="video/mp4/mpe2013_en.mp4" type="video/mp4" /> 
+					<source src="video/ogg/mpe2013_en.ogg" type="video/ogg" /> 
+					<source src="video/webm/mpe2013_en.webm" type="video/webm" /> 
+					<track src="mpe2013.srt" kind="subtitle" srclang="en-US" label="English" />
+				</video>
+-->
+				<video id="%MM_Video" class="video-js vjs-default-skin vjs-big-play-centered" controls width="800" height="600" poster="./images/affiche_en.png"> 
+				</video>
+			</div>
+			<a id="backButton" class="button" style="z-index:2; font-size:16pt; position:absolute; bottom:20px; left:20px;" href="javascript:href('moreviews1920x1080.html')"><span id="%Back">a</span></a>
+		</div>
+		<script type="text/javascript">
+			$(document).on( "ready", function() { $(".video-js[id^=\\%]").each( function(index) { videojs( this.id, {}, init ); } ); } );
+		</script>
+	</body>
+<html>

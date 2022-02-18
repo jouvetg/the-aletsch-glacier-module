@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title> Modelling Aletsch Glacier </title>
+
+		<link href="./glaciers.css" rel="stylesheet">
+		<link href="./js/video-js/video-js.css" rel="stylesheet">
+		<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+		
+		<script type="text/javascript" src="./js/video-js/video.js"></script>
+
+		<script type="text/javascript" src="./js/l10n.js"></script>
+		<script type="text/javascript" src="./translation.js"></script>	
+		<script type="text/javascript" src="./common.js"></script>	
+
+		<script type="text/javascript">
+			var timer;
+			
+			function play( player_name ) {
+				document.getElementById( player_name ).style.visibility = 'visible';
+				videojs( player_name ).play();
+				return void(0);
+			}
+			
+			function stop( player_name ) {
+				if( videojs( player_name ).bufferedPercent() > 0.0 )
+					videojs( player_name ).currentTime(0);
+				document.getElementById( player_name ).style.visibility = 'hidden';
+			}
+			
+			var numCalls = 0;
+			function initPlayer()
+			{
+				this.player
+				numCalls++;
+				if( numCalls == $(".video-js").length )
+				{
+					localize();
+
+					$(".video-js").css( "visibility", "hidden" );
+
+/*					
+					$(".video-js[id^=\\%]").each( function(index) {
+
+						player = videojs( this.id );
+						player.on( "ended", function() { stop( player.id ); } );
+						stop( player.id );
+					} );
+*/
+				}
+			}
+		</script>
+	</head>
+	<body style="color:#ffffff; background-image: url(images/aletsch_photo_3-black.jpg); background-size: 100% auto;">
+		<div class="contentbox">
+
+			<div class="languagelinkbox">
+				<a href="javascript:selectLanguage('en')">EN</a><br/>
+				<a href="javascript:selectLanguage('de')">DE</a><br/>
+				<a href="javascript:selectLanguage('fr')">FR</a><br/> 
+			</div>
+
+			<h1><span id="%Title2">a</span></h1> <br/>
+
+
+			<div class="scenarioshl">
+				<span style="width:3%;"></span>
+				<span style="width:94%;" id="%Introduction">a</span>
+				<span style="width:3%;"></span>
+			</div>
+			<div class="scenarios">
+				<a class="button" style="font-size:20pt;" href="javascript:play('Scenario1_Video');"><span id="%Scenario1_Title">a</span></a>
+				<a class="button" style="font-size:20pt;" href="javascript:play('Scenario2_Video');"><span id="%Scenario2_Title">a</span></a>
+				<a class="button" style="font-size:20pt;" href="javascript:play('Scenario3_Video');"><span id="%Scenario3_Title">a</span></a> 
+			</div>
+			<div class="scenarios">
+				<span class="video">
+					<video id="Scenario1_Video" class="video-js vjs-default-skin vjs-big-play-centered" width="575" height="540" poster="images/aletsch-2017.jpg">
+						<source src="video/mp4/aletsch-1998-2018.mp4" type='video/mp4' />
+						<source src="video/webm/aletsch-1998-2018.webm" type='video/webm' />
+						<source src="video/ogv/aletsch-1998-2018.ogv" type='video/ogg' />
+					</video>
+				</span>
+				<span class="video">
+					<video id="Scenario2_Video" class="video-js vjs-default-skin vjs-big-play-centered" width="575" height="540" poster="images/aletsch-2017.jpg">
+						<source src="video/mp4/aletsch-RCP26.mp4" type='video/mp4' />
+						<source src="video/webm/aletsch-RCP26.webm" type='video/webm' />
+						<source src="video/ogv/aletsch-RCP26.ogv" type='video/ogg' />
+					</video>
+				</span>
+				<span class="video">
+					<video id="Scenario3_Video" class="video-js vjs-default-skin vjs-big-play-centered" width="575" height="540" poster="images/aletsch-2017.jpg">
+						<source src="video/mp4/aletsch-RCP85.mp4" type='video/mp4' />
+						<source src="video/webm/aletsch-RCP85.webm" type='video/webm' />
+						<source src="video/ogv/aletsch-RCP85.ogv" type='video/ogg' />
+					</video>
+				</span> 
+			</div>
+			<a class="button3" style="font-size:20pt; position:absolute; bottom:20px; left:20px;" href="javascript:href('moreviews1920x1080.html')"><span id="%LinkMoreViews">a</span></a>
+			<a class="button3" style="font-size:20pt; position:absolute; bottom:20px; left:25%;" href="javascript:href('moreinfos1920x1080.html')"><span id="%LinkMoreInfos">a</span></a>
+			<a class="button3" style="font-size:20pt; position:absolute; bottom:20px; left:42%;" href="javascript:href('2grad.html')"><span id="%Link2Grad">a</span></a>
+			<a class="button3" style="font-size:20pt; position:absolute; bottom:20px; left:65%;" href="javascript:href('aletschinthepast.html')"><span id="%LinkAletschPast">a</span></a>
+			<a class="button3" style="font-size:20pt; position:absolute; bottom:20px; right:20px;" href="javascript:href('aletschwithlakes.html')"><span id="%LinkAletschLakes">a</span></a>
+		</div>
+
+		<script type="text/javascript">
+			$(document).on( "ready", function() {
+				$(".video-js").each( function(index) { videojs( this.id, {}, initPlayer ); } );
+			} );
+		</script>
+
+	</body>
+<html>

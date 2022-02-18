@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title> Modelling Aletsch Glacier </title>
+
+		<link href="./glaciers.css" rel="stylesheet">
+		<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script> 
+		<script type="text/javascript" src="./js/l10n.js"></script>
+		<script type="text/javascript" src="./translation.js"></script>	
+		<script type="text/javascript" src="./common.js"></script>	
+
+		<script type="text/javascript">
+			function init() {
+				this.on( "ended", function() { location.href="moreviews1920x1080.html"; } );
+                localize();
+			}
+		</script>
+	</head>
+	<body style="color:#ffffff; background-image: url(images/aletsch_photo_3-black.jpg); background-size: 100% auto;">
+		<div class="contentbox">
+
+			<div class="languagelinkbox">
+				<a href="javascript:selectLanguage('en')">EN</a><br/>
+				<a href="javascript:selectLanguage('de')">DE</a><br/>
+				<a href="javascript:selectLanguage('fr')">FR</a><br/>
+			</div>
+
+			<h1><span id="%Title3">a</span></h1>
+			<div style="top:10%; left:3%; width:45%; height: 80%; position:absolute; text-align:justify;">
+  			        <h2><span id="%TitleMI1">a</span></h2>
+		                <span id="%CExplanations"> </span> <br/> <br/>  
+				<span id="%CReferences1"> </span> <a href="material/future_retreat_of_great_aletsch_glacier.pdf"> [PDF] </a>  <br/> 
+				<span id="%CReferences2"> </span> <a href="material/Jouvet_Huss_Funk_Blatter_2011.pdf"> [PDF] </a>  <br/> <br/>    
+			</div>
+			<div style="top:10%; left: 52%; width:45%; height: 80%; position:absolute; text-align:justify;">	
+  			        <h2><span id="%TitleMI3">a</span></h2>
+				<span id="%CAletsch"> </span> <br/>   
+  			        <h2><span id="%TitleMI2">a</span></h2>
+				<span id="%CModule"> </span> <br/>  <br/>  <br/>      
+      			            <div style="left: 0%; width:6%; position:absolute; text-align:justify;">
+                                    <img src="images/projector.png" height="50px"  alt="">
+                                    </div>
+      			            <div style="left: 9%; width:91%; position:absolute; text-align:justify;">
+                                    <span id="%CFurther"> </span> 
+                                    </div>  	
+			</div>
+			<a id="backButton" class="button" style="z-index:2; font-size:16pt; position:absolute; bottom:20px; left:20px;" href="javascript:href('moreviews1920x1080.html')"><span id="%Back">a</span></a>
+			<a class="button3" style="font-size:20pt; position:absolute; bottom:20px; left:40%;" href="javascript:href('mathematicalmodelling1920x1080.html')"> <img src="images/projector.png" height="30px"  alt=""> <span id="%LinkMathematicalMovie">a</span></a>
+			<a class="button3" style="font-size:20pt; position:absolute; bottom:20px; left:60%;" href="javascript:href('glacialmystery1920x1080.html')"> <img src="images/projector.png" height="30px"  alt=""> <span id="%LinkGlacialMysteryMovie">a</span></a>
+			<a class="button3" style="font-size:20pt; position:absolute; bottom:20px; right:20px;" href="javascript:href('120000yearsago1920x1080.html')"> <img src="images/projector.png" height="30px"  alt=""> <span id="%Link120000Movie">a</span></a>
+		</div>
+		<script language="JavaScript">
+			$(document).on( "ready", localize );
+		</script>
+	</body>
+<html>

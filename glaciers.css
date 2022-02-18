@@ -1,0 +1,129 @@
+@font-face {
+	font-family: Purisa;
+	src: url("UbuntuMono-R.eot") /* EOT file for IE */
+}
+@font-face {
+	font-family: Purisa;
+	src: url("UbuntuMono-R.ttf") /* TTF file for CSS3 browsers */
+}
+
+body {
+	font-family: Purisa, Verdana, Arial, sans-serif;
+	font-size: 18pt;
+	color: black;
+	margin:0px;
+	padding:0px;
+	overflow: hidden;
+}
+
+h1 {
+	font-size:45pt;
+	text-align:center;
+}
+
+h2 {
+	font-size:28pt;
+}
+
+.contentbox {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 1920px;
+	height: 1080px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	/*border: 1px solid white;*/
+	/*background-color: #5391fe;*/
+}
+ 
+.languagelinkbox {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding: 20px;
+	font-size:30px;
+	z-index:101;
+}
+
+a {
+	color: #ffffff;
+}
+
+a.button {
+	font-size:30pt;
+	text-align: center;
+	vertical-align:middle;
+	padding:1ex;
+	border:10px solid #ffffff;
+	border-radius: 25px;
+    background-color:#303a31;
+}
+
+a.button:hover, a.button:active { background-color:#444444; }
+
+a:link, a:hover, a:active, a:visited { text-decoration:none; }
+
+a.button3 {
+	font-size:30pt;
+	text-align: center;
+	vertical-align:middle;
+	padding:1ex;
+	border:10px solid #ffffff;
+	border-radius: 25px;
+        background-color:#555555;
+}
+
+div.scenarios {
+    display: table;
+    width: 95%;
+    table-layout: fixed;    /* For cells of equal size */
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    border-spacing:30px;
+    
+}
+
+div.scenarios span.video {
+    display: table-cell;
+    text-align: center;
+    vertical-align:top;
+}
+
+div.scenarioshl {
+	font-size:32pt;
+    display: table;
+    width: 95%;
+    margin-left:2.5%;
+    margin-right:2.5%;
+    margin-bottom:0px;
+    table-layout: fixed;    /* For cells of equal size */
+}
+
+div.scenarioshl span {
+    display: table-cell;
+    text-align: center;
+    vertical-align:top;
+}
+
+div.scenarios a.button {
+	margin: 10px;
+    display: table-cell;
+    text-align: middle;
+}
+
+.vjs-default-skin .vjs-mute-control { display:none; }
+.vjs-default-skin .vjs-volume-control { display: none; }			
+.video-js { border: 1px dashed #333333; }
+
+.scaleEquation {
+	-webkit-transform: scale(1.4)
+	-moz-transform: scale(1.4);
+	-ms-transform: scale(1.4);
+	-o-transform: scale(1.4);
+	transform: scale(1.4);	
+}
